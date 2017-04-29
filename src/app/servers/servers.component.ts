@@ -14,13 +14,17 @@ export class ServersComponent implements OnInit {
 	public get allowNewServer():boolean { return this._allowNewServer; }
 	public set allowNewServer(allow:boolean) { this._allowNewServer = allow; }
 
-	private _serverCreationStatus:string = 'No server was created.';
+	private _serverCreationStatus:string = '';
 	public get serverCreationStatus():string { return this._serverCreationStatus; }
 	public set serverCreationStatus(status:string) { this._serverCreationStatus = status; }
 
 	private _serverName:string = 'placeholder';
 	public get serverName():string { return this._serverName; }
 	public set serverName(name:string) { this._serverName = name; }
+
+	private _serverCreated:boolean = false;
+	public get serverCreated():boolean { return this._serverCreated; }
+	public set serverCreated(status:boolean) { this._serverCreated = status ; }
 
 
 	constructor() {
@@ -32,7 +36,8 @@ export class ServersComponent implements OnInit {
 	ngOnInit() {}
 
 	public onCreateServer() {
-		this.serverCreationStatus = `${this.serverName} server was created!`;
+		// this.serverCreationStatus = `${this.serverName} server was created!`;
+		this.serverCreated = true;
 	}
 
 	public onUpdateServerName(event: Event) { this.serverName = (<HTMLInputElement>event.target).value; }
