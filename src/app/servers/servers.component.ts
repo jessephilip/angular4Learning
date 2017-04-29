@@ -7,19 +7,21 @@ import { ServerComponent } from '../server/server.component';
 	templateUrl: './servers.component.html',
 	styleUrls: ['./servers.component.css']
 })
+
 export class ServersComponent implements OnInit {
 
 	private _allowNewServer: boolean = false;
 	public get allowNewServer():boolean { return this._allowNewServer; }
 	public set allowNewServer(allow:boolean) { this._allowNewServer = allow; }
 
-	private _serverCreationStatus:string = 'No server as created.';
-	public get serverCreationStatus():string {
-		return this._serverCreationStatus;
-	}
-	public set serverCreationStatus(status:string) {
-		this._serverCreationStatus = status;
-	}
+	private _serverCreationStatus:string = 'No server was created.';
+	public get serverCreationStatus():string { return this._serverCreationStatus; }
+	public set serverCreationStatus(status:string) { this._serverCreationStatus = status; }
+
+	private _serverName:string = '';
+	public get serverName():string { return this._serverName; }
+	public set serverName(name:string) { this._serverName = name; }
+
 
 	constructor() {
 		setTimeout(() => {
@@ -29,8 +31,8 @@ export class ServersComponent implements OnInit {
 
 	ngOnInit() {}
 
-	public onCreateServer() {
-		this.serverCreationStatus = 'Server was created!';
-	}
+	public onCreateServer() { this.serverCreationStatus = 'Server was created!'; }
+
+	public onUpdateServerName(event: Event) { this.serverName = (<HTMLInputElement>event.target).value; }
 
 }
