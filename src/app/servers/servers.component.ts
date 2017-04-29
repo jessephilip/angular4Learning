@@ -18,7 +18,7 @@ export class ServersComponent implements OnInit {
 	public get serverCreationStatus():string { return this._serverCreationStatus; }
 	public set serverCreationStatus(status:string) { this._serverCreationStatus = status; }
 
-	private _serverName:string = '';
+	private _serverName:string = 'placeholder';
 	public get serverName():string { return this._serverName; }
 	public set serverName(name:string) { this._serverName = name; }
 
@@ -31,7 +31,9 @@ export class ServersComponent implements OnInit {
 
 	ngOnInit() {}
 
-	public onCreateServer() { this.serverCreationStatus = 'Server was created!'; }
+	public onCreateServer() {
+		this.serverCreationStatus = `${this.serverName} server was created!`;
+	}
 
 	public onUpdateServerName(event: Event) { this.serverName = (<HTMLInputElement>event.target).value; }
 
