@@ -26,6 +26,10 @@ export class ServersComponent implements OnInit {
 	public get serverCreated():boolean { return this._serverCreated; }
 	public set serverCreated(status:boolean) { this._serverCreated = status ; }
 
+	private _servers:Array<any> = ['Test Server', 'Development Server', 'Production Server'];
+	public get servers():Array<any> { return this._servers; }
+	public set servers(servers:Array<any>) { this._servers = servers ; }
+
 
 	constructor() {
 		setTimeout(() => {
@@ -38,6 +42,7 @@ export class ServersComponent implements OnInit {
 	public onCreateServer() {
 		// this.serverCreationStatus = `${this.serverName} server was created!`;
 		this.serverCreated = true;
+		this.servers.push(this.serverName);
 	}
 
 	public onUpdateServerName(event: Event) { this.serverName = (<HTMLInputElement>event.target).value; }

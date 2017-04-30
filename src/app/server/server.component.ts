@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-server',
+	styleUrls: ['./server.component.css'],
 	templateUrl: './server.component.html'
 })
 
@@ -11,7 +12,7 @@ export class ServerComponent {
 		this.status = Math.random() > 0.5 ? 'online' : 'offline';
 	}
 
-	private _title:string = 'app-server';
+ 	private _title:string;
 	get title():string { return this._title; }
 	set title(title:string) { this._title = title; }
 
