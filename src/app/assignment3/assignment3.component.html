@@ -1,14 +1,17 @@
-<button
-	(click)="buttonPress($event)"
-	>Display Details
-</button>
-<p
-	*ngIf="showParagraph"
-	>Secret Password = tuna
-</p>
-<p
-	*ngFor="let buttonPress of buttonPresses; let i = index"
-	[ngStyle]="{backgroundColor: i >= 4 ? 'blue' : false}"
-	[ngClass]="{white: i >= 4}"
-	>Timestamp: {{ buttonPress }}
-</p>
+<div class="container">
+	<button
+		class="btn btn-primary"
+		(click)="buttonPress($event)"
+		>Display Details
+	</button>
+	<p
+		*ngIf="showParagraph"
+		>Secret Password = tuna
+	</p>
+	<p
+		*ngFor="let buttonPress of buttonPresses; let i = index"
+		[ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+		[ngClass]="{white: i >= 4}"
+		>Timestamp: {{ buttonPress }}
+	</p>
+</div>
