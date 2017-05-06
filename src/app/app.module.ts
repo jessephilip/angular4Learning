@@ -13,6 +13,9 @@ import { Assignment3Component } from './assignment3/assignment3.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { ServerElementComponent } from './server-element/server-element.component';
+import { GameControlComponent } from './game-control/game-control.component';
+import { OddComponent } from './game-control/odd/odd.component';
+import { EvenComponent } from './even/even.component';
 
 @NgModule({
 	declarations: [
@@ -25,7 +28,10 @@ import { ServerElementComponent } from './server-element/server-element.componen
 		Assignment3Component,
 		DataBindingComponent,
 		CockpitComponent,
-		ServerElementComponent
+		ServerElementComponent,
+		GameControlComponent,
+		OddComponent,
+		EvenComponent
 	],
 	imports: [
 		BrowserModule,

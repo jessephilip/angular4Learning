@@ -21,7 +21,7 @@
 			*ngFor="let serverElement of serverElements"
 			[srvElement]="serverElement"
 			[name]="serverElement.name">
-			<p>
+			<p #paragraph>
 				<strong
 					*ngIf="serverElement.type === 'server'"
 					style="color: red"
