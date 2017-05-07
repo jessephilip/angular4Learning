@@ -38,44 +38,44 @@ export class ServerElementComponent implements
 	@ContentChild('paragraph') paragraph:ElementRef;
 
 	constructor() {
-		console.log('constructor called.');
+		// console.log('constructor called.');
 	}
 
 	ngOnChanges(changes: SimpleChanges) {
-		console.log('onChanges called.', changes);
+		// console.log('onChanges called.', changes);
 
 	}
 
 	ngOnInit() {
-		console.log('onInit called.');
+		// console.log('onInit called.');
 	}
 
 	ngDoCheck() {
-		console.log('doCheck called');
+		// console.log('doCheck called');
 	}
 
 	ngAfterContentInit() {
-		console.log('afterContentInit called.');
-		console.log('Passed Local Reference: paragraph: ', this.paragraph.nativeElement.textContent);
+		// console.log('afterContentInit called.');
+		// console.log('Passed Local Reference: paragraph: ', this.paragraph.nativeElement.textContent);
 
 	}
 
 
 	ngAfterContentChecked() {
-		console.log('afterContentChecked called.');
+		// console.log('afterContentChecked called.');
 	}
 
 	ngAfterViewInit() {
-		console.log('AfterViewInit called.');
-		console.log('Local Reference: header: ', this.header.nativeElement.textContent);
+		// console.log('AfterViewInit called.');
+		// console.log('Local Reference: header: ', this.header.nativeElement.textContent);
 	}
 
 	ngAfterViewChecked() {
-		console.log('AfterViewChecked called.');
+		// console.log('AfterViewChecked called.');
 	}
 
 	ngOnDestroy() {
-		console.log('OnDestroy called.');
+		// console.log('OnDestroy called.');
 	}
 
 }

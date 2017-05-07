@@ -1,13 +1,21 @@
 <div class="container">
+	<div class="row">
+		<div class="col-xs-12">
+			<app-odd [number]="x"></app-odd>
+			<app-even [number]="x"></app-even>
+		</div>
+	</div>
+
 	<button
 		type="button"
 		class="btn btn-primary"
-		(click)="startGame($event)">
+		(click)="startGame(x)">
 		Start
 	</button>
 	<button
 		type="button"
-		class="btn btn-danger">
+		class="btn btn-danger"
+		(click)="stopGame()">
 		Stop
 	</button>
 </div>

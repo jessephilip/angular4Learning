@@ -1,4 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { EvenComponent } from './even/even.component';
+import { OddComponent } from './odd/odd.component';
 
 @Component({
 	selector: 'app-game-control',
@@ -11,15 +13,25 @@ export class GameControlComponent implements OnInit {
 
 	ngOnInit() {}
 
-	@Output() start:EventEmitter<number> = new EventEmitter<number>();
+	@Output() x:number = 0;
 
-	private x:number = 0;
+	public incrementNumber() {
+		this.x++;
+		console.log('emit ', this.x);
+	}
 
-	private emitNumber = this.start.emit(this.x++);
+	// create the variable here, but do not assign it the setInterval or it will run on startup
+	public timer;
 
-	private startGame = setInterval(this.emitNumber, 1000);
+	// use fat arrow function to preserve THIS referring to the class.
+	// notice that the setInterval is calling the actual this.incrementNumber function
+	public startGame() {
+		this.timer = setInterval(() => this.incrementNumber(), 1000);
+	}
 
-	private stopGame = clearInterval(this.startGame);
+	public stopGame = function () {
+		clearInterval(this.timer);
+	}
 
 
 
