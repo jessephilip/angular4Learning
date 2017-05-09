@@ -5,22 +5,22 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 	templateUrl: './odd.component.html',
 	styleUrls: ['./odd.component.css']
 })
-export class OddComponent implements OnInit, OnChanges {
+export class OddComponent implements OnInit {
 
 	constructor() { }
 
 	ngOnInit() {
-		console.log(this.number);
+		// console.log(this.number);
 	}
 
-	ngOnChanges(changes: SimpleChanges) {
-		console.log('odd', changes);
-		if (changes.number.currentValue % 2 !== 0) this.oddArray.push(changes.number.currentValue);
-	}
+	// ngOnChanges(changes: SimpleChanges) {
+	// 	console.log('odd', changes);
+	// 	if (changes.number.currentValue % 2 !== 0) this.oddArray.push(changes.number.currentValue);
+	// }
 
 	@Input() number:number;
-
-	private _oddArray:number[] = [];
-	public get oddArray():number[] { return this._oddArray; }
-	public set oddArray(array:number[]) { this._oddArray = array; }
+	//
+	// private _oddArray:number[] = [];
+	// public get oddArray():number[] { return this._oddArray; }
+	// public set oddArray(array:number[]) { this._oddArray = array; }
 }

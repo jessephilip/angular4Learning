@@ -5,23 +5,23 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 	templateUrl: './even.component.html',
 	styleUrls: ['./even.component.css']
 })
-export class EvenComponent implements OnInit, OnChanges{
+export class EvenComponent implements OnInit {
 
 	constructor() { }
 
 	ngOnInit() {
-		console.log(this.number);
+		// console.log(this.number);
 	}
 
 	ngOnChanges(changes: SimpleChanges) {
 		console.log('even', changes);
-		if (changes.number.currentValue % 2 === 0) this.evenArray.push(changes.number.currentValue);
+		// if (changes.number.currentValue % 2 === 0) this.evenArray.push(changes.number.currentValue);
 	}
 
 	@Input() number:number;
-
-	private _evenArray:number[] = [];
-	public get evenArray():number[] { return this._evenArray; }
-	public set evenArray(array:number[]) { this._evenArray = array; }
+	//
+	// private _evenArray:number[] = [];
+	// public get evenArray():number[] { return this._evenArray; }
+	// public set evenArray(array:number[]) { this._evenArray = array; }
 
 }
