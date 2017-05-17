@@ -18,7 +18,23 @@
 <p basicHighlightDirective>This is some text styled with my custom basic directive</p>
 <hr>
 <br>
-<p [appBetterHighlightDirective]="'blue'" [highlightColor]="'white'">This is some text styled with my custom better directive</p>
-<button (click)="showUnless ? showUnless = false : showUnless = true">Show Unless Directive</button>
-<p *appUnless [appUnless]="false">This paragraph will only be shown if showUnless is false.  appUnless:  {{ appUnless }}</p>
+<p
+    [appBetterHighlightDirective]="'blue'"
+    [highlightColor]="'white'">
+    This is some text styled with my custom better directive
+</p>
+<button
+    (click)="showUnless ? showUnless = false : showUnless = true">
+    Show Unless Directive
+</button>
+<p
+    *appUnless="showUnless">
+    This paragraph will only be shown if showUnless is false.
+</p>
+<ul [ngSwitch]="value">
+    <li *ngSwitchCase="7">Seven</li>
+    <li *ngSwitchCase="14">Fourteen</li>
+    <li *ngSwitchDefault>All others</li>
+</ul>
+
 

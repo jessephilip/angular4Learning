@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+	private _value = 7;
+	public get value(): number { return this._value; }
+	public set value(value: number) { this._value = value; }
+
 	// for assignment number 4
 	oddNumbers: number[] = [];
 	evenNumbers: number[] = [];
