@@ -1,22 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'app-data-binding',
 	templateUrl: './data-binding.component.html',
 	styleUrls: ['./data-binding.component.css']
 })
-export class DataBindingComponent implements OnInit {
-
-	constructor() { }
-
-	ngOnInit() { }
+export class DataBindingComponent {
 
 	serverElements = [
-		{type:'server', name:'Testserver', content:'Just a test.'},
-		{type:'server', name:'Development Server', content:'For development.'},
-		{type:'server', name:'Production Server', content:'For production.'},
+		{type: 'server', name: 'Testserver', content: 'Just a test.'},
+		{type: 'server', name: 'Development Server', content: 'For development.'},
+		{type: 'server', name: 'Production Server', content: 'For production.'},
 	];
-
 
 	onServerAdded(serverData: {serverName: string, serverContent: string}) {
 		this.serverElements.push({

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { EvenComponent } from './even/even.component';
 import { OddComponent } from './odd/odd.component';
 
@@ -7,25 +7,21 @@ import { OddComponent } from './odd/odd.component';
 	templateUrl: './game-control.component.html',
 	styleUrls: ['./game-control.component.css']
 })
-export class GameControlComponent implements OnInit {
+export class GameControlComponent {
 
-	constructor() { }
-
-	ngOnInit() {}
-
-	interval;
+	// variable taking the interval method
+	private interval;
+	private lastNumber = 0;
 	@Output() intervalFired = new EventEmitter<number>();
 
-	lastNumber = 0;
-
-	onStartGame() {
+	private onStartGame() {
 		this.interval = setInterval(() => {
 			this.intervalFired.emit(this.lastNumber + 1);
 			this.lastNumber++;
 		}, 1000);
 	}
 
-	onPauseGame() {
+	private onPauseGame() {
 		clearInterval(this.interval);
 	}
 

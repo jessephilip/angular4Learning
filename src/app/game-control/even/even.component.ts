@@ -7,18 +7,18 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 })
 export class EvenComponent implements OnInit {
 
-	constructor() { }
+	@Input() number: number;
 
 	ngOnInit() {
 		// console.log(this.number);
 	}
 
+	// tslint:disable-next-line:use-life-cycle-interface
 	ngOnChanges(changes: SimpleChanges) {
 		console.log('even', changes);
 		// if (changes.number.currentValue % 2 === 0) this.evenArray.push(changes.number.currentValue);
 	}
 
-	@Input() number:number;
 	//
 	// private _evenArray:number[] = [];
 	// public get evenArray():number[] { return this._evenArray; }

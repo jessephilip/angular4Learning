@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
-import { SuccessalertComponent } from './successalert/successalert.component';
+import { SuccessAlertComponent } from './successAlert/successAlert.component';
 import { Assignment2Component } from './assignment2/assignment2.component';
 import { Assignment3Component } from './assignment3/assignment3.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
@@ -28,7 +28,7 @@ import { UnlessDirective } from './unless/unless.directive';
 		ServerComponent,
 		ServersComponent,
 		WarningAlertComponent,
-		SuccessalertComponent,
+		SuccessAlertComponent,
 		Assignment2Component,
 		Assignment3Component,
 		DataBindingComponent,

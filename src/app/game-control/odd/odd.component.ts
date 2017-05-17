@@ -7,7 +7,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 })
 export class OddComponent implements OnInit {
 
-	constructor() { }
+	@Input() number: number;
 
 	ngOnInit() {
 		// console.log(this.number);
@@ -18,7 +18,6 @@ export class OddComponent implements OnInit {
 	// 	if (changes.number.currentValue % 2 !== 0) this.oddArray.push(changes.number.currentValue);
 	// }
 
-	@Input() number:number;
 	//
 	// private _oddArray:number[] = [];
 	// public get oddArray():number[] { return this._oddArray; }

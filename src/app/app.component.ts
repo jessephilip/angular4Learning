@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+	// value variable used for custom directive lesson regarding ngSwitch
 	private _value = 7;
 	public get value(): number { return this._value; }
 	public set value(value: number) { this._value = value; }

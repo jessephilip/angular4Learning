@@ -10,25 +10,25 @@ import { ServerComponent } from '../server/server.component';
 
 export class ServersComponent implements OnInit {
 
-	private _allowNewServer: boolean = false;
-	public get allowNewServer():boolean { return this._allowNewServer; }
-	public set allowNewServer(allow:boolean) { this._allowNewServer = allow; }
+	private _allowNewServer = false;
+	public get allowNewServer(): boolean { return this._allowNewServer; }
+	public set allowNewServer(allow: boolean) { this._allowNewServer = allow; }
 
-	private _serverCreationStatus:string = '';
-	public get serverCreationStatus():string { return this._serverCreationStatus; }
-	public set serverCreationStatus(status:string) { this._serverCreationStatus = status; }
+	private _serverCreationStatus = '';
+	public get serverCreationStatus(): string { return this._serverCreationStatus; }
+	public set serverCreationStatus(status: string) { this._serverCreationStatus = status; }
 
-	private _serverName:string = 'placeholder';
-	public get serverName():string { return this._serverName; }
-	public set serverName(name:string) { this._serverName = name; }
+	private _serverName = 'placeholder';
+	public get serverName(): string { return this._serverName; }
+	public set serverName(name: string) { this._serverName = name; }
 
-	private _serverCreated:boolean = false;
-	public get serverCreated():boolean { return this._serverCreated; }
-	public set serverCreated(status:boolean) { this._serverCreated = status ; }
+	private _serverCreated = false;
+	public get serverCreated(): boolean { return this._serverCreated; }
+	public set serverCreated(status: boolean) { this._serverCreated = status ; }
 
-	private _servers:Array<any> = ['Test Server', 'Development Server', 'Production Server'];
-	public get servers():Array<any> { return this._servers; }
-	public set servers(servers:Array<any>) { this._servers = servers ; }
+	private _servers: Array<any> = ['Test Server', 'Development Server', 'Production Server'];
+	public get servers(): Array<any> { return this._servers; }
+	public set servers(servers: Array<any>) { this._servers = servers ; }
 
 
 	constructor() {
