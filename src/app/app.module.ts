@@ -17,6 +17,11 @@ import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './game-control/odd/odd.component';
 import { EvenComponent } from './game-control/even/even.component';
 
+// services module
+import { ServicesComponent } from './services_module/services.component';
+import { AccountComponent } from './services_module/account/account.component';
+import { NewAccountComponent } from './services_module/new-account/new-account.component';
+
 // directives
 import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
@@ -39,7 +44,10 @@ import { UnlessDirective } from './unless/unless.directive';
 		EvenComponent,
 		BasicHighlightDirective,
 		BetterHighlightDirective,
-		UnlessDirective
+		UnlessDirective,
+		ServicesComponent,
+		AccountComponent,
+		NewAccountComponent
 	],
 	imports: [
 		BrowserModule,
